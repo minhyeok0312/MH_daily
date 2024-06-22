@@ -1,0 +1,107 @@
+/* media.css */
+
+/* 기본 스타일 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.board_wrap {
+    width: 90%;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.board_title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.board_title strong {
+    font-size: 24px;
+    color: #333;
+}
+
+.board_title p {
+    font-size: 16px;
+    color: #666;
+}
+
+.board_list_wrap {
+    border-top: 1px solid #ddd;
+}
+
+.board_list .top {
+    display: flex;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.board_list .num,
+.board_list .title,
+.board_list .writer,
+.board_list .date,
+.board_list .count {
+    flex: 1;
+    text-align: center;
+    font-weight: bold;
+}
+
+.board_page {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.bt_wrap {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.bt_wrap a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.bt_wrap a.on {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .board_list .top {
+        flex-direction: column;
+    }
+
+    .board_list .num,
+    .board_list .title,
+    .board_list .writer,
+    .board_list .date,
+    .board_list .count {
+        flex: none;
+        width: 100%;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .board_title strong {
+        font-size: 20px;
+    }
+
+    .board_title p {
+        font-size: 14px;
+    }
+}
